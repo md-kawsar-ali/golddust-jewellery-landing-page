@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'Archivo', sans-serif;
+}
+
+/* ===========================================
+                Header Section
+============================================= */
+.nav-link {
+    color: #333333;
+    transition: all 0.3s;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link,
+.navbar-nav .nav-link:hover {
+    color: #c79541;
+    transition: all 0.3s;
+}
+
+/* ===========================================
+                Hero Section
+============================================= */
+.hero {
+    height: calc(100vh - 85px);
+    width: 100%;
+    background: url('../img/hero-white.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    cursor: none;
+}
+
+.hero::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.45);
+    z-index: -1;
+}
+
+.spotlight {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    opacity: 0.75;
+    border-radius: 50%;
+    cursor: none;
+    transition: all 0.1s;
+    z-index: -1;
+}
+
+.hero h1 {
+    color: #2d2d2d;
+    font-size: 2.9rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    line-height: 1.28;
+    text-transform: uppercase;
+    cursor: none;
+    margin-bottom: 5px;
+}
+
+.hero h1::first-line {
+    font-size: 3rem;
+}
+
+.hero h1 span {
+    color: #cea251;
+}
+
+.hero p {
+    color: #2d2d2d;
+    font-size: 1.415rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    cursor: none;
+}
+
+/* ===========================================
+                About Section
+============================================= */
+.about {
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.about::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400px;
+    background: #fafafa;
+    filter: blur(60px);
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.about h2 {
+    color: #333333;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 20px 0;
+    position: relative;
+}
+
+.about h2::after {
+    position: absolute;
+    content: '';
+    bottom: -28px;
+    left: 0;
+    height: 6px;
+    width: 35%;
+    background: #cfa350;
+    border-radius: 5px;
+    transition: all 0.5s;
+    opacity: 0.75;
+}
+
+.about h2:hover::after {
+    width: 45%;
+    transition: all 0.5s;
+}
