@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;800&display=swap');
 
 * {
     margin: 0;
@@ -121,7 +121,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.4;
-    margin: 20px 0;
+    margin: 20px 0 35px;
     position: relative;
 }
 
@@ -148,8 +148,8 @@ body {
 ============================================= */
 .cta {
     overflow: hidden;
-    background: #040c0e url('../img/cta.jpg') no-repeat;
-    background-size: 50%;
+    background: #000000 url('../img/cta.jpg') no-repeat;
+    background-size: 45%;
     background-position: left center;
     position: relative;
     z-index: 0;
@@ -162,38 +162,76 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgb(4, 12, 14);
+    background: rgb(0, 0, 0);
     background: linear-gradient(
         280deg,
-        rgba(4, 12, 14, 1) 0%,
-        rgba(4, 12, 14, 0) 100%
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 100%
     );
     z-index: -1;
 }
 
 .cta .contact {
-    padding: 100px;
+    padding: 100px 20px 100px 40px;
 }
 
 .cta h2 {
     color: #ffffff;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: 'Archivo', sans-serif;
     font-weight: 600;
-    margin-bottom: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
 }
 
 .cta .form-control {
     color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 1px;
     background: transparent;
     border-radius: 0;
 }
 
 .cta label {
     color: #dddddd;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .cta button {
     padding: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
     border-radius: 0;
+    border: none;
+    transition: all 0.3s;
+}
+
+.cta button:hover {
+    background: #dbba7c;
+    transition: all 0.3s;
+}
+
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext {
+    padding: 0.75rem;
+}
+
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext,
+.form-floating > .form-select {
+    height: 3rem;
+    line-height: 1.25;
+}
+
+.form-floating > label {
+    padding: 0.75rem;
+}
+
+.form-control:focus {
+    color: #dbba7c;
+    background-color: transparent;
+    border-color: #dbba7c;
+    outline: 0;
+    box-shadow: none;
 }

@@ -4,7 +4,7 @@ const spotlightDiameter = 280;
 // Verify that the mouse event wasn't triggered by a descendant.
 function verifyMouseEvent(e, elem) {
     e = e || window.event;
-    const related = e.relatedTarget || e.toElement;
+    let related = e.relatedTarget || e.toElement;
 
     while ((related != undefined) &&
         (related != elem) &&
