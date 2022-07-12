@@ -142,3 +142,58 @@ body {
     width: 45%;
     transition: all 0.5s;
 }
+
+/* ===========================================
+                CTA Section
+============================================= */
+.cta {
+    overflow: hidden;
+    background: #040c0e url('../img/cta.jpg') no-repeat;
+    background-size: 50%;
+    background-position: left center;
+    position: relative;
+    z-index: 0;
+}
+
+.cta::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(4, 12, 14);
+    background: linear-gradient(
+        280deg,
+        rgba(4, 12, 14, 1) 0%,
+        rgba(4, 12, 14, 0) 100%
+    );
+    z-index: -1;
+}
+
+.cta .contact {
+    padding: 100px;
+}
+
+.cta h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.cta .form-control {
+    color: #ffffff;
+    background: transparent;
+    border-radius: 0;
+}
+
+.cta label {
+    color: #dddddd;
+}
+
+.cta button {
+    padding: 12px;
+    border-radius: 0;
+}
