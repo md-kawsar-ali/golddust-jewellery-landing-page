@@ -11,6 +11,19 @@ body {
     font-family: 'Archivo', sans-serif;
 }
 
+.btn-check:focus + .btn,
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn-check:active + .btn:focus,
+.btn-check:checked + .btn:focus,
+.btn.active:focus,
+.btn.show:focus,
+.btn:active:focus {
+    box-shadow: none;
+}
+
 /* ===========================================
                 Header Section
 ============================================= */
