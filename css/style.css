@@ -319,3 +319,69 @@ body {
     color: #dbba7c;
     transition: all 0.3s;
 }
+
+/* ===========================================
+              Benefits Section
+============================================= */
+.benefits {
+    padding: 100px 0;
+    background: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.benefits::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 400px;
+    width: 400px;
+    background: url('../img/ring.jpg') no-repeat center;
+    background-size: cover;
+    filter: grayscale(10px);
+    opacity: 0.125;
+    z-index: -1;
+}
+
+.benefits .title {
+    margin-bottom: 30px;
+}
+
+.benefits .item {
+    padding: 30px;
+    background: #000000;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits .item::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border: 20px solid #dbba7c;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    opacity: 0.75;
+}
+
+.benefits .item h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.benefits .item p {
+    color: #fefefe;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    margin: 0;
+}
