@@ -24,6 +24,14 @@ body {
     box-shadow: none;
 }
 
+.title {
+    color: #111111;
+    font-size: 2.8rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
 /* ===========================================
                 Header Section
 ============================================= */
@@ -144,15 +152,15 @@ body {
     bottom: -28px;
     left: 0;
     height: 6px;
-    width: 35%;
+    width: 25%;
     background: #cfa350;
     border-radius: 5px;
     transition: all 0.5s;
     opacity: 0.75;
 }
 
-.about h2:hover::after {
-    width: 45%;
+.about:hover h2::after {
+    width: 35%;
     transition: all 0.5s;
 }
 
@@ -247,4 +255,67 @@ body {
     border-color: #dbba7c;
     outline: 0;
     box-shadow: none;
+}
+
+/* ===========================================
+              Testimonial Section
+============================================= */
+.testimonial {
+    padding: 100px 0;
+}
+
+.testimonial .title {
+    text-align: center;
+}
+
+.testimonial .review {
+    background: #0a0a0a;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border-radius: 15px;
+    margin: 0 10px;
+    cursor: grab;
+}
+
+.testimonial .review img {
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.testimonial .review q {
+    color: #ffffff;
+    line-height: 1.6;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 1px;
+    display: block;
+    transition: all 0.3s;
+}
+
+.testimonial .review strong {
+    color: #dbba7c;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: right;
+    text-transform: capitalize;
+    display: block;
+}
+
+.slick-dots {
+    bottom: -40px;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    opacity: 1;
+    color: #dbba7c;
+    transition: all 0.3s;
 }
