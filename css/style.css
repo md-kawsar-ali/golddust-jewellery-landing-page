@@ -9,6 +9,7 @@ html,
 body {
     font-size: 16px;
     font-family: 'Archivo', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .btn-check:focus + .btn,
@@ -32,11 +33,25 @@ body {
     margin-bottom: 50px;
 }
 
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    width: 1em;
+    height: 1.45em;
+}
+
 /* ===========================================
                 Header Section
 ============================================= */
+header {
+    border-bottom: 1px solid #f7f7f7;
+}
+
 .nav-link {
     color: #333333;
+    text-align: center;
     transition: all 0.3s;
 }
 
@@ -45,6 +60,10 @@ body {
 .navbar-nav .nav-link:hover {
     color: #c79541;
     transition: all 0.3s;
+}
+
+.navbar-brand img {
+    max-height: 60px;
 }
 
 /* ===========================================
@@ -325,7 +344,10 @@ body {
 ============================================= */
 .benefits {
     padding: 100px 0;
-    background: #f9f9f9;
+    background: url('../img/benefits-bg.jpg') no-repeat;
+    background-position: left center;
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -333,15 +355,13 @@ body {
 
 .benefits::before {
     position: absolute;
+    content: '';
     top: 0;
     left: 0;
-    content: '';
-    height: 400px;
-    width: 400px;
-    background: url('../img/ring.jpg') no-repeat center;
-    background-size: cover;
-    filter: grayscale(10px);
-    opacity: 0.125;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    opacity: 0.75;
     z-index: -1;
 }
 
@@ -365,14 +385,26 @@ body {
     height: 100px;
     width: 100px;
     background-color: transparent;
-    border: 20px solid #dbba7c;
+    border: 20px solid #ddb874;
     border-radius: 50%;
     transform: translate(50%, -50%);
+    transition: all 0.5s;
     opacity: 0.75;
 }
 
+.benefits .item:hover::before {
+    height: 130px;
+    width: 130px;
+    transition: all 0.5s;
+}
+
+.benefits .item img {
+    max-height: 50px;
+    margin-bottom: 15px;
+}
+
 .benefits .item h3 {
-    color: #ffffff;
+    color: #fafafa;
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 5px;
@@ -380,8 +412,303 @@ body {
 }
 
 .benefits .item p {
-    color: #fefefe;
+    color: #fafafa;
     line-height: 1.25;
     letter-spacing: 1px;
     margin: 0;
+}
+
+/* ===========================================
+               Footer Section
+============================================= */
+footer {
+    padding: 80px 0 0;
+}
+
+footer img {
+    max-height: 100px;
+}
+
+.copyright {
+    border-top: 1px solid #eeeeee;
+    background: #f5f5f5;
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+.copyright p {
+    color: #333333;
+    margin-bottom: 0;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* ===========================================
+               Responsive Style
+============================================= */
+@media screen and (max-width: 1200px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero h1::first-line {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.18rem;
+    }
+
+    .about h2 {
+        font-size: 1.6rem;
+    }
+
+    .about:hover h2::after {
+        width: 25%;
+    }
+
+    .cta h2 {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 45px;
+    }
+
+    .benefits .item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-brand img {
+        max-height: 50px;
+    }
+
+    .nav-link {
+        color: #333333;
+        text-align: center;
+        transition: all 0.3s;
+        padding: 5px 0;
+    }
+
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .hero h1 br {
+        display: none;
+    }
+
+    .hero h1,
+    .hero h1::first-line {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    .about br {
+        display: none;
+    }
+
+    .about h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cta::before {
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+    }
+
+    .testimonial .review q {
+        font-size: 15px;
+    }
+
+    .testimonial .review img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        padding-right: 25px;
+        padding-left: 25px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .hero {
+        height: calc(100vh - 75px);
+        background-position: center right;
+    }
+    .hero::before {
+        background: rgba(255, 255, 255, 0.6);
+    }
+    .hero h1,
+    .hero h1::first-line {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        width: 80%;
+        margin: auto;
+    }
+    .about {
+        padding: 50px 0 15px;
+    }
+    .about h2 {
+        font-size: 1.24rem;
+    }
+
+    .about img {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .cta .contact {
+        padding: 70px 30px 70px 30px;
+    }
+
+    .cta h2 {
+        font-size: 1.5rem;
+        line-height: 1.35;
+    }
+
+    .testimonial {
+        padding: 70px 0;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 35px;
+    }
+
+    .testimonial .review {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .testimonial .review strong {
+        text-align: center;
+        line-height: 1.5;
+        margin-top: 15px;
+    }
+
+    .slick-dots li {
+        margin: 0;
+    }
+
+    .slick-dots li button:before {
+        font-size: 8px;
+    }
+
+    .benefits {
+        padding: 70px 0;
+        background-position: center;
+    }
+
+    .benefits .item h3 {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer img {
+        width: 280px;
+        margin: auto;
+    }
+
+    footer {
+        padding: 70px 0 0;
+    }
+
+    .copyright {
+        padding: 25px 0;
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .title {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .hero {
+        max-height: 400px;
+    }
+
+    .hero h1,
+    .hero h1::first-line {
+        font-size: 1.25rem;
+    }
+
+    .hero p {
+        width: 100%;
+        font-weight: 400;
+    }
+
+    .about h2 {
+        font-size: 1rem;
+    }
+
+    .about img {
+        max-width: 180px;
+        margin: auto;
+    }
+
+    .cta h2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    .cta .contact {
+        padding: 70px 10px 70px 10px;
+    }
+
+    .testimonial .review {
+        padding: 30px 20px;
+        gap: 15px;
+        margin: 0 5px;
+    }
+
+    footer {
+        padding: 60px 0 0;
+    }
+
+    footer img {
+        width: 220px;
+        margin: auto;
+    }
+
+    .copyright {
+        padding: 23px 0;
+        margin-top: 60px;
+    }
+
+    .copyright p {
+        font-size: 14px;
+    }
 }
