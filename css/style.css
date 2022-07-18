@@ -300,15 +300,16 @@ header {
 }
 
 .testimonial .review img {
-    height: 130px;
-    width: 130px;
+    height: 230px;
+    width: 230px;
     object-fit: cover;
     object-position: center;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .testimonial .review q {
     color: #ffffff;
+    font-size: 18px;
     line-height: 1.6;
     font-weight: 300;
     font-style: italic;
@@ -319,9 +320,10 @@ header {
 
 .testimonial .review strong {
     color: #dbba7c;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1;
+    margin-top: 10px;
     letter-spacing: 1px;
     text-align: right;
     text-transform: capitalize;
@@ -534,12 +536,16 @@ footer img {
     }
 
     .testimonial .review q {
-        font-size: 15px;
+        font-size: 16px;
+    }
+
+    .testimonial .review storng {
+        font-size: 16px;
     }
 
     .testimonial .review img {
-        height: 100px;
-        width: 100px;
+        height: 180px;
+        width: 180px;
     }
 }
 
